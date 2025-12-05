@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database Ticket Print Test</title>
+  </head>
+  <body>
+    <!-- Developer Notes:
+    ==================    
+    
+    Database Ticket Print Test:
+    Does the printer print a ticket using live data fetched from the database?
+
+    Problem: 
+      - The ticket is still hard-coded. In real life scenario, there is a database that holds the close-images and room prompts.
+
+    Learnings:
+      - Leverage React + Supabase for speed, built-in tools, and modern dev flow. 
+      - Supabase covers backend for you => Supabase is BaaS (Backend-as-a-Service).
+      - Even with downloading the ticket in your downloads folder and then have it printed locally, you still need a node.js server running to generate the pdf as a ticket. This is because we use pdfkit to generate the pdf and sharp to process the images. They are not available in the browser environment.
+      - Now the frontend and backend are not on the same port, so CORS is an issue. You need to set up CORS in your node.js server to allow requests from your frontend. Particularly, you need to allow the vite development server port (usually 5173) in your CORS configuration.
+
+    Solution:
+    - Dev Setup: 
+      - front-end will be react in vite + react router (+ gsap later added for interactions) 
+      - supabase for database
+      - back-end is node.js + express for pdf generation with pdfkit and sharp to process images in http environment (local development)
+
+    ‼️ Limitations:
+    - You need to have a default printer set up on your Mac for this to work.
+    - You need to run the Node.js server in the terminal with `node server.js` to listen for requests and use pdfkit and sharp libraries to make the ticket pdfs and image processing.
+    - The printer needs to support double-sided printing, otherwise it will print each page separately. 
+    - Http environment only.
+    -->
+
+    <div id="root"></div>
+    <script type="module" src="/app/main.jsx"></script>
+  </body>
+</html>

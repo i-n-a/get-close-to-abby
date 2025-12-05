@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer Connection Test</title>
+</head>
+<body>
+<!-- 
+  Developer Notes:
+  ==================    
+  
+  Printer Connection Test - Option C: frontend and backend printing via Node.js: 
+  If you click a button, does it send a command to the printer and print a basic message? 
+
+  Problem: 
+    - Browsers do not allow silent (automatic) printing due to security & privacy reasons.
+    - The window.print() method always shows a print dialog and cannot be bypassed with JavaScript alone. The user must confirm the print action.
+
+  Learnings:
+    - Direct printer access requires backend or native code normally.
+  
+  Solution:
+   - Let a button trigger come from the frontend to the backend. A post request (to take care of the print command) is sent to the backend.
+   - Use of express in node.js to create a simple server (& with https/http setup) that listens for requests. (Express = backend server that talks to your frontend)
+   - The frontend and backend are on the same port, so CORS is not an issue.
+  
+  ‼️ Limitations:
+  - You need to have a default printer set up on your Mac for this to work.
+  - You need to run the Node.js server in the terminal with `node server.js` to listen for requests.
+
+-->
+ <h1>Printer Connection Test</h1>
+ <button id="printBtn">Print Ticket</button>
+ <p id="status"></p>
+
+ <script>
+     document.getElementById('printBtn').addEventListener('click', async () => {
+        const statusEl = document.getElementById('status');
+        try {
+          const response = await fetch(`${window.location.origin}/print-ticket`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+          });
+          const data = await response.json();
+          statusEl.textContent = data.message;
+        } catch (err) {
+          statusEl.textContent = 'Error printing ticket';
+          console.error(err);
+        }
+      });
+  </script>
+</body>
+</html>

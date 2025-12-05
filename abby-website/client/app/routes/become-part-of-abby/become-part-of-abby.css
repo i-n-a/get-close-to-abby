@@ -1,0 +1,443 @@
+.sticker-send-invitation {
+    display: none;
+}
+
+.become-part-of-abby-intro-left, .become-part-of-abby-invitations, .become-part-of-abby-not-ready{
+    margin-left: var(--fluid-space-m);
+    margin-right: var(--fluid-space-m);
+}
+
+.become-part-of-abby-intro-left_h1 {
+    font-size: var(--font-step-5);
+}
+
+.become-part-of-abby-not-ready_title{
+    font-size: var(--font-step-3);
+}
+
+.letter-fly{
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.become-part-of-abby-intro-left_h1{
+    padding-top: var(--fluid-space-l-xl);
+}
+
+.become-part-of-abby-intro-left_textone{
+    padding-top: var(--fluid-space-l-xl);
+}
+
+.become-part-of-abby-intro-left_texttwo{
+    padding-top: var(--fluid-space-m-l);
+    padding-bottom: var(--fluid-space-xl);
+}
+
+.become-part-of-abby-intro-right{
+    background-color: var(--color-green);
+    height: 45vh;
+    text-align: center;
+    align-content: center;
+}
+
+.become-part-of-abby-intro-bottom{
+    padding-bottom: var(--fluid-space-xl);
+}
+
+.become-part-of-abby-intro-bottom_text{
+    background-color: var(--color-blue);
+    padding:var(--fluid-space-m);
+}
+
+.become-part-of-abby-intro-bottom_text_two{
+    padding-top: var(--fluid-space-xs);
+    padding-bottom: var(--fluid-space-l);
+}
+
+.become-part-of-abby-intro-bottom_image {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.become-part-of-abby-invitations h2{
+    text-align: center;
+    padding-bottom: var(--fluid-space-l);
+    padding-top: var(--fluid-space-xl);
+}
+
+.become-part-of-abby-invitation-personal_text-1{
+    padding-bottom: var(--fluid-space-l);
+}
+
+.become-part-of-abby_invitation_dashlist li {
+    position: relative;
+    padding-left: var(--fluid-space-m);
+    margin-bottom: var(--fluid-space-xs);
+    line-height: 1.1;
+}
+
+.become-part-of-abby_invitation_dashlist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 1rem;
+    height: 2px;
+    background-color:var(--color-purple);
+}
+
+.become-part-of-abby-invitation_upbutton_text{
+    text-align: center;
+    padding-top: var(--fluid-space-l);
+}
+
+.divider-line{
+    width: 100%;
+    height: 0.05rem;
+    background-color: var(--color-black);
+}
+
+.button_become_part{
+    display: flex;
+    justify-self: center;
+    margin-top: var(--fluid-space-s);
+    margin-bottom: var(--fluid-space-xl);
+}
+
+.become-part-of-abby-invitation-open_text-2{
+    padding-top: var(--fluid-space-m);
+    padding-bottom: var(--fluid-space-m);
+}
+
+.pill {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    margin: 0.2rem 0.02rem;
+    border: 1px solid var(--color-black);
+    border-radius: 1rem;
+    line-height: 1;
+}
+
+.become-part-of-abby_not_ready_section_desktop{
+    display: none;
+}
+
+.become-part-of-abby_not_ready_section_mobile{
+    background-color: var(--color-blue);
+    padding-top: var(--fluid-space-xl);
+    padding-bottom: var(--fluid-space-3xs);
+}
+
+.become-part-of-abby-not-ready_title{
+    padding-bottom: var(--fluid-space-m);
+}
+
+.become-part-of-abby-not-ready_text_2{
+    padding-top: var(--fluid-space-m);
+    padding-bottom: var(--fluid-space-m);
+}
+
+.become-part-of-abby_next_step{
+    padding-top: var(--fluid-space-m);
+    text-align: center;
+}
+
+
+@media screen and (min-width: 20em) {
+    .breadcrumb{
+        display: none;
+    }
+
+    h2{
+        font-size: var(--font-step-4);
+    }
+
+    .become-part-of-abby-ps_message{
+        display: none;
+    }
+    
+    .button_become_part{
+        padding: 15px 20px;
+        font-size: var(--font-step-0); }
+}
+
+/* 768px - tablet */
+@media screen and (min-width: 48em) {
+
+    .sticker-send-invitation{
+        display: block;
+        font-size: var(--s-1-25);
+        background-color: var(--color-orange);
+    }
+
+    .become-part-of-abby-ps_message{
+        display: block;
+        background-color: var(--color-blue);
+    }
+
+    .become-part-of-abby_not_ready_section_mobile {
+        display: none;
+    }
+
+    .become-part-of-abby_not_ready_section_desktop {
+        display: block;
+        background-color: var(--color-blue);
+    }
+
+    .button_become_part{
+        padding: 15px 30px;
+        font-size: var(--font-step-1);
+    }
+
+    .become-part-of-abby-intro{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        font-display: flex;
+    }
+
+    .become-part-of-abby-intro-left{
+        grid-column: 2/6;
+        grid-row: 1/4;
+        align-self: center;
+        margin-left: -2rem;
+    }
+
+    .become-part-of-abby-intro-right{
+        grid-column: 7/11;
+        grid-row: 1/5;
+        align-content: center;
+        height: 60vh;
+    }
+
+    .sticker-wrapper {
+        position: absolute;
+        top: 25%;
+        left: 53%;
+        z-index: 1;
+    }
+    
+    .sticker-send-invitation {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(20deg);
+        text-align: center;
+    }
+
+    .letter-fly{
+        font-size: 5rem;
+    }
+
+    .become-part-of-abby-intro-bottom{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    .become-part-of-abby-intro-bottom_image{
+        height: 300px;
+        grid-column: 1/7;
+    }
+
+    .become-part-of-abby-intro-bottom_image picture{
+        width: 100%;
+    }
+
+    .become-part-of-abby-intro-bottom_text{
+        grid-column: 7/16;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .become-part-of-abby-intro-bottom_text_one{
+        grid-column: 2/7;
+        align-self: flex-end;
+    }
+
+    .become-part-of-abby-intro-bottom_text_two{
+        grid-column: 2/7;
+        align-self: center;
+        margin-top: -1rem;
+    }
+
+    .become-part-of-abby-intro-bottom_text_three{
+        grid-column: 2/7;
+    }
+
+    .become-part-of-abby-invitations {
+        margin-top: var(--fluid-space-xl);
+        margin-bottom: var(--fluid-space-3xl);
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+    }
+    
+    .become-part-of-abby-invitation-personal {
+        grid-column: 1 / 6;
+    }
+    
+    .become-part-of-abby-invitation-open {
+        grid-column: 7 / 12;
+    }
+    
+    .divider-line {
+        grid-column: 6/7;
+        justify-self: center;
+        width: 0.05rem;
+        height: 100%;
+        background-color: var(--color-black);
+    }
+    
+    .become-part-of-abby-ps_message {
+        grid-column: 1/ 12;
+        padding: var(--fluid-space-m) var(--fluid-space-m);
+        margin-inline-start: auto;
+        width: 50%;
+    }
+
+    .become-part-of-abby-ps_message-text{
+        padding-bottom: var(--fluid-space-s);
+    }
+
+    .invitation-cta {
+        margin-top: var(--fluid-space-s);
+        justify-items: flex-start;
+    }
+    
+    .button_become_part{
+        display: flex;
+        justify-self: flex-start;
+    }
+
+    .become-part-of-abby-invitation-personal,
+    .become-part-of-abby-invitation-open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .invitation-cta {
+        margin-top: auto;
+    }
+
+    .become-part-of-abby_not_ready_section_desktop {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        align-items: center;
+        padding-top: 0%;
+    }
+
+    .become-part-of-abby-not-ready {
+        grid-column: 1/5;
+        margin-left: var(--fluid-space-xl);
+        margin-right: 0;
+    }
+
+    .become-part-of-abby-not-ready_title{
+        padding-top: var(--fluid-space-l);
+    }
+      
+    .become-part-of-abby_not_ready_section_desktop img{
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+    }
+
+    .become-part-of-abby-not-ready-image {
+        grid-column: 6 / 10; 
+    }
+
+    .become-part-of-abby_next_step{
+        text-align: left;
+    }
+}
+
+
+/* 1728px - desktop */
+@media screen and (min-width: 64em) {
+
+    .button_become_part{
+        height: 58px;
+        padding: 24px 45px;
+        font-size: var(--font-step-2);
+    }
+
+    .breadcrumb {
+        display: block;
+    }
+
+    .become-part-of-abby-invitation-texts{
+        margin-top: var(--fluid-space-s);
+    }
+
+    .become-part-of-abby-not-ready_title{
+        padding-top: 0%;
+    }
+
+    .become-part-of-abby-ps_message-text{
+        padding-bottom: 0%;
+    }
+
+    .become-part-of-abby-intro{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        font-display: flex;
+    }
+
+    .become-part-of-abby-intro-left{
+        grid-column: 2/6;
+        grid-row: 1/4;
+        align-self: center;
+    }
+
+    .become-part-of-abby-intro-right{
+        grid-column: 7/11;
+        grid-row: 1/5;
+        align-content: center;
+        height: 67vh;
+    }
+
+    .sticker-wrapper {
+        position: absolute;
+        top: 25%;
+        left: 55%;
+        z-index: 1;
+    }
+    
+    .sticker-send-invitation {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(20deg);
+        text-align: center;
+    }
+
+    .letter-fly{
+        font-size: 10rem;
+    }  
+
+    .become-part-of-abby-invitation-personal {
+        grid-column: 2 / 6;
+    }
+
+    .become-part-of-abby-invitation-open {
+        grid-column: 7 / 11;
+    }
+
+    .become-part-of-abby-ps_message {
+        padding: var(--fluid-space-m) var(--fluid-space-m);
+    }
+
+    .become-part-of-abby-not-ready {
+        grid-column: 2/5;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

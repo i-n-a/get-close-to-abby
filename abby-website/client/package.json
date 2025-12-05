@@ -1,0 +1,34 @@
+{
+  "name": "abby-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js"
+  },
+  "dependencies": {
+    "@pubnub/chat": "^0.12.1",
+    "@react-router/node": "^7.5.3",
+    "@react-router/serve": "^7.5.3",
+    "@supabase/supabase-js": "^2.50.0",
+    "dotenv": "^16.5.0",
+    "isbot": "^5.1.27",
+    "jspdf": "^3.0.1",
+    "pdf-lib": "^1.17.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.6.2",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@react-router/dev": "^7.6.2",
+    "@tailwindcss/vite": "^4.1.4",
+    "eslint": "^9.28.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
+    "tailwindcss": "^4.1.4",
+    "vite": "^6.3.5"
+  }
+}

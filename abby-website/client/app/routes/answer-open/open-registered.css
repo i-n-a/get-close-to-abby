@@ -1,0 +1,120 @@
+.labelSStyle {
+  font-size: 13px;
+  color: #BB7CD2 !important;
+  line-height: normal;
+}
+
+.welcome-message{
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  padding: 15px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--color-blue);
+}
+
+.invitation__title-text{
+  color: var(--color-black);
+}
+
+.invitation__info-title{
+  color: var(--color-black);
+}
+
+.invitation__info-text{
+  color: var(--color-black);
+}
+
+.invitation__welcome-message{
+  background-color: var(--color-blue);
+  padding: var(--fluid-space-m);
+  margin-top: -1rem;
+}
+
+.invitation__welcome-message-guestname{
+  font-size: var(--font-step-2);
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.invitation__welcome-message-text{
+  font-size: var(--font-step-0);
+  color: var(--color-black);
+}
+
+.chat-intro-wrapper-q{
+  display: flex;
+  gap: var(--fluid-space-3xs);
+  font-size: var(--font-step-1);
+  font-weight: 500;
+  margin-bottom: -0.6rem;
+  margin-top: var(--fluid-space-xs);
+}
+
+.chat-intro-wrapper-q-pp{
+  color: var(--color-black);
+}
+
+.leave-event-section{
+  background-color: var(--color-blue);
+  margin-bottom: var(--fluid-space-s);
+  padding: var(--fluid-space-m);
+  text-align: center;
+}
+
+.what-abby-organises-section{
+  background-color: var(--color-yellow);
+  padding: var(--fluid-space-m);
+  text-align: center;
+}
+
+.leave-event-q, .what-abby-organises-section-title{
+  font-size: var(--font-step-1);
+  color: var(--color-black);
+  padding-bottom: var(--fluid-space-2xs);
+  font-weight: 500;
+}
+
+.leave-event-q-text, .what-abby-organises-section-text{
+  font-size: var(--font-step-0);
+  color: var(--color-black);
+  padding-bottom: var(--fluid-space-2xs);
+}
+
+.chat-intro-wrapper-q-p{
+  color: var(--color-black);
+}
+
+.invitation__info-name_desc{
+  color: var(--color-black);
+}
+
+
+@media screen and (min-width: 48em) {
+  .invitation>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--fluid-space-l);
+  }
+
+  .leave-event-section,
+  .what-abby-organises-section {
+    padding: var(--fluid-space-l);
+    text-align: center;
+    height: 100%;
+  }
+
+  .chat-intro-wrapper-q-p{
+    color: var(--color-black);
+  }
+
+  .chat-intro-wrapper-q{
+    font-size: var(--font-step-2);
+  }
+
+  .chat-intro-wrapper-q-pp{
+    font-size: var(--font-step-0);
+    color: var(--color-black);
+  }
+}

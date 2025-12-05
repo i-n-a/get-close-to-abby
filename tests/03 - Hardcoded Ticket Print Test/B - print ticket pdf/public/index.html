@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardcoded Ticket Print Test - ticket pdf</title>
+</head>
+<body>
+<!-- 
+  Developer Notes:
+  ==================    
+  
+  Hardcoded Ticket Print Test - ticket pdf: 
+  If you click the button, does the printer print a ticket with fixed sample data (e.g., name and time)?
+
+  Problem: 
+    - Browsers do not allow silent (automatic) printing due to security & privacy reasons.
+    - The window.print() method always shows a print dialog and cannot be bypassed with JavaScript alone. The user must confirm the print action.
+
+  Learnings:
+    - Direct printer access requires backend or native code normally.
+    - When we use data coming from a backend, we can generate a PDF with the ticket data and then download it to the user's device. 
+    - The PDF has 2 pages, in this case the printer can print a double-sided ticket. But you need to set up the printer correctly for this.
+    - The frontend and backend are on the same port, so CORS is not an issue.
+  
+  Solution:
+   - Let a button trigger a POST request so the server can do the action of generating the PDF and getting this pdf back to the client so it can be downloaded.
+   - Use of express in node.js to create a simple server (& with https/http setup) that listens for requests. (Express = backend server that talks to your frontend)
+
+  ‼️ Limitations:
+  - You need to have a default printer set up on your Mac for this to work.
+  - You need to run the Node.js server in the terminal with `node server.js` to listen for requests.
+  - The printer needs to support double-sided printing, otherwise it will print each page separately.
+
+-->
+<button>Get Ticket</button>
+
+<script>
+  document.querySelector('button').addEventListener('click', downloadTicket);
+
+  async function downloadTicket() {
+    const response = await fetch(`${window.location.origin}/generate-ticket`, { method: 'POST' });
+    if (!response.ok) {
+      alert('Failed to generate ticket');
+      return;
+    }
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ticket-double-sided.pdf';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(url);
+  }
+</script>
+</body>
+</html>

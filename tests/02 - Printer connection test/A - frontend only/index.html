@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer Connection Test</title>
+</head>
+<body>
+<!-- 
+  Developer Notes:
+  ==================    
+  
+  Printer Connection Test - Option A (download + Automator print): 
+  If you click a button, does it send a command to the printer and print a basic message? 
+
+  Problem: 
+    - Browsers do not allow silent (automatic) printing due to security & privacy reasons.
+    - The window.print() method always shows a print dialog and cannot be bypassed with JavaScript alone. The user must confirm the print action.
+
+  Learnings:
+    - Direct printer access requires backend or native code normally.
+    - But: on MacOS you can use Automator to auto-print a webpage. This doesn't use backend code, but rather a local script that can be triggered by a button click.
+  
+  Solution:
+   - When you click the button, it generates a .txt file and downloads it to print a simple message.
+
+  How to setup automator on MacOS to auto-print (= automating an actual print command)
+    📌 Instructions:
+    1. Open Automator on your Mac.
+    2. Choose New > Folder Action.
+    3. In the top bar: select your downloads folder
+     Folder Action receives files and folders added to: "Choose your folder".
+    4. In the left sidebar, search for:
+    "Print Finder Items"
+    5. Drag that action to the workflow (right side).
+    6. Save it as something like: Auto Print Tickets.
+
+    ✅ What this does:
+    Whenever a file is added to Downloads, Automator automatically sends it to the printer.
+
+    ‼️ Limitations:
+    - You need to select your downloads folder in the Automator setup.
+    - Using a subfolder in your downloads folder will not work, as the browser does not allow you to choose or force a specific subfolder path to save files to (for security reasons).
+    - You need to have a default printer set up on your Mac for this to work.
+    - Test is done with USB connected printer, not network printer.
+-->
+ <h1>Printer Connection Test</h1>
+ <button onclick="downloadTicket()">Download Ticket (TXT)</button>
+ <script>
+    function downloadTicket() {
+      const text = "🎟 Ticket\nName: John Doe\nTime: 12:30 PM\nSeat: A12";
+      // the /n is a newline character, it creates a new line in the text file that is downloaded and then printed
+      const blob = new Blob([text], { type: "text/plain" });
+      // Blob is a file-like object of immutable, raw data. It can be used to create a file-like object of the text content.
+      // for txt files, the Blob method holds a string of text and the type is set to "text/plain" to indicate that it is a plain text file.
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "ticket.txt";
+      link.click();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database Ticket Print Test</title>
+  </head>
+  <body>
+    <!-- 
+    Developer Notes:
+    ==================    
+    
+    Database Ticket Print Test:
+    Does the printer print a ticket using live data fetched from the database?
+
+    Problem: 
+      - The ticket is still hard-coded. In real life scenario, there is a database that holds the close-images and room prompts.
+
+    Learnings:
+      - Leverage React + Supabase for speed, built-in tools, and modern dev flow. 
+      - Supabase covers backend for you => Supabase is BaaS (Backend-as-a-Service).
+      - By using other libraries like pdfmake or jsPDF, you can generate PDFs directly in the browser without needing a Node.js backend.
+      - Grayscaling the supabase close up images are done with a helper function that uses the browsers canvas API in js.
+      - Now you don't need a server running to generate the ticket anymore.
+    
+    Solution:
+    - Dev Setup: 
+      - front-end will be react in vite (+ gsap later added for interactions) 
+      - supabase for database
+      - there is no back-end anymore. 2 other pdf generating js libraries are tested 
+      - grayscaling the supabase close up images are done with a helper function that uses the browsers canvas API in js 
+
+    ‼️ Limitations:
+    - You need to have a default printer set up on your Mac for this to work.
+    - The printer needs to support double-sided printing, otherwise it will print each page separately.
+    -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

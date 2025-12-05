@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+:root{
+  --color-black: #090909;
+  --color-white: #F7F7F7;
+  --color-blue: #5F90FF;
+  --color-yellow: #FFBF50;
+  --color-brown: #691E12;
+  --color-green: #00A468;
+  --color-orange: #FF5F00;
+  --color-purple: #BB7CD2;
+}
+
+body {
+  margin: 0 24rem
+}
+
+/* for the code with chatscope.io */
+.chat-main{
+  background-color: var(--color-purple);
+}

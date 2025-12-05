@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04 - Database Connection Test</title>
+  </head>
+  <body>
+  <!-- 
+    Developer Notes:
+    ==================    
+    
+    Database Connection Test:
+    Can the app connect to the database and successfully retrieve ticket data?
+
+    Problem: 
+      - The ticket is still hard-coded. In real life scenario, there is a database that holds the close-images and room clue prompts.
+
+    Learnings:
+      - Leverage React + Supabase for speed, built-in tools, and modern dev flow. 
+      - Supabase covers backend for you => Supabase is BaaS (Backend-as-a-Service).
+    
+    Solution:
+    - Dev Setup: 
+      - front-end will be react in vite (+ gsap later added for interactions) 
+      - supabase for database
+      - back-end will be added again later to use pdf generation and sharp image process library ( = node.js (+ express?) for pdf generation and sharp image process library)
+
+    ‼️ Limitations:
+    - This test is only a basic connection test to the database.
+    - It will download a ticket.txt file with the data cominf from the database, which is the clue text and the close-up image URL.
+  -->
+    <div id="root"></div>
+    <script type="module" src="/app/main.jsx"></script>
+  </body>
+</html>

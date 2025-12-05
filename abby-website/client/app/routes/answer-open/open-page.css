@@ -1,0 +1,265 @@
+.invitation {
+  color: var(--color-black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.invitation__container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: white;
+}
+
+.invitation__title {
+  padding-bottom: var(--fluid-space-xl);
+  margin-left: var(--fluid-space-m);
+  margin-right: var(--fluid-space-m);
+}
+
+.invitation__info-title{
+  font-size: var(--font-step-2);
+  padding-bottom: var(--fluid-space-s);
+  font-weight: 500;
+}
+
+.invitation__info-name_desc{
+  color: var(--color-black);
+}
+
+.invitation__title-text {
+  margin-top: var(--fluid-space-m);
+}
+
+.invitation__info-group {
+  margin-bottom: var(--fluid-space-s);
+}
+
+.invitation__info{
+  margin-bottom: var(--fluid-space-l);
+  margin-left: var(--fluid-space-m);
+  margin-right: var(--fluid-space-m);
+  border-left: 2px solid var(--color-black);
+  padding-left: var(--fluid-space-l);
+}
+
+.invitation__info-label {
+  font-weight: bold;
+  font-size: var(--font-step--1);
+  color: var(--color-purple);
+}
+
+.partcipants-counting{
+  color: var(--color-black);
+  font-weight: 500;
+  font-size: var(--font-step-1);
+  padding-bottom: var(--fluid-space-s);
+}
+
+.invitation__info-text {
+  font-size: var(--font-step-1);
+}
+
+.invitation__info-value {
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.invitation__welcome {
+  margin: 1rem 0;
+  background-color: var(--color-blue);
+  display: flex;
+  flex-grow: 1;
+  padding: 15px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  color:var(--color-black);
+}
+
+.invitation__registration {
+  background-color: var(--color-yellow);
+  padding: var(--fluid-space-m);
+  border-radius: none;
+  text-align: center;
+}
+
+.invitation__registration-label {
+  font-weight: 600;
+}
+
+.invitation__slots {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: var(--fluid-space-xs);
+  justify-content: center;
+}
+
+.invitation__slot {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-orange);
+  background-color: var(--color-yellow);
+  border-radius: 0.125rem;
+}
+
+.invitation__slot--filled {
+  background-color: var(--color-orange);
+}
+
+.invitation__signup{
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-0-5);
+  margin-top: var(--s-2);
+  margin-bottom: var(--fluid-space-2xl);
+  justify-content: center;
+  align-items: center;
+}
+
+.invitation__signup-button {
+  color: var(--black);
+  border: none;
+  border-radius: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.invitation__signup-button:hover {
+  background-color: var(--color-dark-yellow);
+}
+
+.invitation__signup-note {
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: -0.3rem;
+}
+
+.invitation__participants {
+  background-color: var(--color-purple);
+  padding: 1rem;
+}
+
+.invitation__participants-header {
+  display: flex;
+  padding-top: var(--fluid-space-s);
+  font-size: var(--font-step-1);
+}
+
+.invitation__participants-title {
+  font-weight: 500;
+  color: var(--color-black);
+  padding-bottom: var(--fluid-space-2xs);
+}
+
+.invitation__participants-list{
+  margin-top: var(--fluid-space-l);
+  margin-bottom: var(--fluid-space-2xs);
+}
+
+.invitation__participants-count {
+  font-size: var(--font-step-0);
+  color: var(--color-black);
+}
+
+.invitation__participant {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: var(--fluid-space-2xs);
+  margin-bottom: var(--fluid-space-xs);
+  border-bottom: 1px solid black;
+  }
+
+.invitation__participant:last-child {
+  border-bottom: none;
+}
+
+.invitation__participant p{
+  color: var(--color-black);
+}
+
+.invitation__participant-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+  border-radius: 9999px;
+}
+
+.banner-image-open_event{
+  display: none;
+}
+
+
+/* 768px - tablet */
+@media screen and (min-width: 48em) {
+
+  .banner-image-open_event {
+    display: block;
+  }
+  .invitation__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: start;
+  }
+
+  .invitation__title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: var(--fluid-space-l);
+    margin-top: var(--fluid-space-xl);
+  }
+
+  .invitation__registration {
+    grid-column: 1;
+    padding: var(--fluid-space-2xl);
+  }
+
+  .invitation__info {
+    grid-column: 2;
+    grid-row: 2;
+    padding: var(--fluid-space-l);
+  }
+
+  .invitation__signup {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--fluid-space-m) 0;
+  }
+
+  .invitation__signup-button{
+    background-color: var(--color-green);
+    margin-top: var(--fluid-space-m);
+  }
+
+  .invitation__signup-button:hover{
+    background-color: var(--color-dark-green);
+  }
+
+  .invitation__participants-count{
+    margin-bottom: var(--fluid-space-xl);
+  }
+
+  .invitation__participants {
+    grid-column: 1 / -1;
+    padding: var(--fluid-space-l);
+    margin-top: var(--fluid-space-l);
+  }
+
+  .invitation__participants-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--fluid-space-m);
+    justify-content: flex-start;
+  }
+
+  .invitation__participant {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+}

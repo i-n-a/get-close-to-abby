@@ -1,0 +1,30 @@
+.confirmation-page__title {
+  font-size: var(--font-step-3);
+  margin-top: var(--fluid-space-xl);
+  margin-bottom: var(--fluid-space-l);
+  color: var(--color-black);
+  font-weight: 400;
+}
+
+.confirmation-page__text{
+  margin-bottom: var(--fluid-space-s);
+  font-size: var(--font-step-1);
+  color: var(--color-black);
+}
+
+.sadface-confirmation-page {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--fluid-space-m);
+}
+
+.confirmation-page__button{
+  color: var(--color-black);
+}
+
+/* 768px - tablet */
+@media screen and (min-width: 48em) {}
+
+/* 1728px - desktop */
+@media screen and (min-width: 64em) {}

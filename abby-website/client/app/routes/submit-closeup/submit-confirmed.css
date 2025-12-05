@@ -1,0 +1,115 @@
+/* ARROW BACK STYLING WITH TEXT */
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: var(--font-step-1);
+}
+
+.arrowBack {
+  width: 1.25rem;
+  height: auto;
+}
+
+.go-back-arow-wrapper{
+    display: flex;
+}
+
+/* PAGE STYLING */
+.smiley-succesfull_green {
+    width: 140px;
+    justify-self: center;
+    align-self: center;
+    margin-top: var(--fluid-space-xl);
+    margin-bottom: var(--fluid-space-m);
+}
+
+.submit-confirmed-intro{
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-confirmed-intro h1{
+    text-align: center;
+    color: var(--color-green);
+    font-size: var(--font-step-4);
+    line-height: 2.8rem;
+}
+
+.submit-confirmed-text-main{
+    margin-top: var(--fluid-space-xl);
+}
+
+.submit-confirmed-text-1{
+    margin-top: var(--fluid-space-m);
+}
+
+.submit-confirmed-text-2{
+    margin-top: var(--fluid-space-xs);
+}
+
+.submit-confirmed-text-3 {
+    margin-top: var(--fluid-space-xs);
+}
+
+
+/* SCROLL PART STYLING */
+.open-confirmation-next_step_section {
+    background-color: var(--color-purple);
+    margin-top: var(--s-4-5);
+    padding-top: var(--fluid-space-l);
+    padding-bottom: var(--fluid-space-m);
+}
+
+h4 {
+    font-size: var(--font-step-3);
+    padding-bottom: var(--fluid-space-l);
+}
+
+h5 {
+    font-size: var(--s-1-5);
+    margin-bottom: var(--fluid-space-2xs);
+    margin-top: var(--fluid-space-xs);
+}
+
+.button_open_confirmed {
+    padding: 15px 20px;
+    font-size: var(--font-step-0);
+    margin-top: var(--fluid-space-s);
+    margin-bottom: var(--fluid-space-s);
+}
+
+.open-confirmation-next_step_choices {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: var(--fluid-space-m);
+    scroll-snap-type: x mandatory;
+    margin: 0;
+}
+
+.open-confirmation-next_step_choices>div {
+    flex: 0 0 80%;
+    min-width: 90%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--fluid-space-s);
+    padding-right: var(--fluid-space-s);
+}
+
+.open-confirmation-next_step_choices picture {
+    width: 100%;
+}
+
+.open-confirmation-next_step_choices h5 {
+    margin-bottom: var(--fluid-space-xs);
+}
+
+.open-confirmation-next_step_choices p {
+    margin-bottom: var(--fluid-space-l);
+}
+
+.open-confirmation-next_step_choices .button_open_confirmed {
+    margin-top: auto;
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PubNub Chatrooms Test</title>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.7.6.1.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+<!-- 
+    Developer Notes:
+    ==================    
+    
+    Can we use PubNub for chat rooms?
+
+    Learnings:
+    - PubNub is a real-time messaging service that can be used for chat rooms.
+    - PubNub provides a JavaScript SDK that can be used to create chat rooms.
+    - PubNub allows you to subscribe to channels and publish messages to channels.
+    - PubNub provides a way to manage chat rooms and users.
+    - See Figjam file for more details: https://www.figma.com/board/vT4THCcwrIsUxfunAO2sty/Integration4?node-id=417-4656&t=IsTfs76dR1NZEAeI-4
+    
+    Solution:
+    - Use PubNub to create a simple chat room application.
+    - 2 chatrooms are created: "room-a" and "room-b".
+    - Like in Supabase, you need to have 2 keys: publish and subscribe keys. Then you can use them to connect to PubNub.
+    - You first subscribe to a room, then you can send messages to that room. You can mimick a conversation by open this page in 2 different tabs or browsers.
+
+    ‼️ Limitations:
+    - Quick prototype test for PubNub chat rooms.
+    - This is a simple test to check if PubNub can be used for chat rooms. You can switch between rooms and send messages.
+    - This is not a full implementation, just a quick test to see if PubNub can be used for chat rooms.
+    - You can switch between rooms and send messages to the new room. But the messages will disappear when you switch rooms.
+-->

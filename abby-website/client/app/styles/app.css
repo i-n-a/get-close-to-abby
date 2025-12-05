@@ -1,0 +1,993 @@
+@import "tailwindcss";
+
+/* What it's for:
+
+Base styles (fonts, colors, reset)
+Layout defaults (like body, button, etc.)
+Shared utility classes
+Tailwind or custom variables */
+
+:root {
+  /* brand colors */
+  --color-black: #090909;
+  --color-white: #f7f7f7;
+  --color-blue: #5f90ff;
+  --color-yellow: #ffbf50;
+  --color-brown: #691e12;
+  --color-green: #00a468;
+  --color-orange: #ff5f00;
+  --color-purple: #bb7cd2;
+
+  /* website colors */
+  --color-bg: #ffffff;
+  --color-grey: #757575;
+  --color-dark-green: #008b58;
+  --color-dark-yellow: #feb636;
+  --color-dark-blue: #5785ed;
+
+  --font-family: "GT Walsheim", Arial, sans-serif;
+  --font-display: "GT Alpina", Georgia, serif;
+
+  --s-0-25: 0.25rem; /* 4px */
+  --s-0-5: 1rem; /* 8px */
+  --s-0-75: 1.5rem; /* 12px */
+  --s-1: 1rem; /* 16px */
+  --s-1-25: 1.25rem; /* 20px */
+  --s-1-5: 1.5rem; /* 24px */
+  --s-2: 2rem; /* 32px */
+  --s-2-5: 2.5rem; /* 40px */
+  --s-3: 3rem; /* 48px */
+  --s-3-75: 3.75rem; /* 60px */
+  --s-4-5: 4.5rem; /* 72px */
+
+  /* Fluid type Utopia */
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1728,18,1.2,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  /* Step -2: 10.24px → 12.5px */
+  --font-step--2: clamp(0.64rem, 0.6079rem + 0.1605vw, 0.7813rem);
+  /* Step -1: 12.8px → 15px */
+  --font-step--1: clamp(0.8rem, 0.7688rem + 0.1563vw, 0.9375rem);
+  /* Step 0: 16px → 18px */
+  --font-step-0: clamp(1rem, 0.9716rem + 0.142vw, 1.125rem);
+  /* Step 1: 20px → 21.6px */
+  --font-step-1: clamp(1.25rem, 1.2273rem + 0.1136vw, 1.35rem);
+  /* Step 2: 25px → 25.92px */
+  --font-step-2: clamp(1.5625rem, 1.5494rem + 0.0653vw, 1.62rem);
+  /* Step 3: 31.25px → 31.104px */
+  --font-step-3: clamp(1.944rem, 1.9552rem + -0.0104vw, 1.9531rem);
+  /* Step 4: 39.0625px → 37.3248px */
+  --font-step-4: clamp(2.3328rem, 2.4661rem + -0.1234vw, 2.4414rem);
+  /* Step 5: 48.8281px → 44.7898px */
+  --font-step-5: clamp(2.7994rem, 3.1091rem + -0.2868vw, 3.0518rem);
+  /* Step 6: 61.0352px → 53.7477px */
+  --font-step-6: clamp(3.3592rem, 3.9182rem + -0.5176vw, 3.8147rem);
+  /* Step 7: 76.2939px → 64.4973px */
+  --font-step-7: clamp(4.0311rem, 4.9359rem + -0.8378vw, 4.7684rem);
+
+  /* Fluid Space Utopia */
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.25,1728,18,1.2,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  /* Space 3xs: 4px → 5px */
+  --fluid-space-3xs: clamp(0.25rem, 0.2358rem + 0.071vw, 0.3125rem);
+  /* Space 2xs: 8px → 9px */
+  --fluid-space-2xs: clamp(0.5rem, 0.4858rem + 0.071vw, 0.5625rem);
+  /* Space xs: 12px → 14px */
+  --fluid-space-xs: clamp(0.75rem, 0.7216rem + 0.142vw, 0.875rem);
+  /* Space s: 16px → 18px */
+  --fluid-space-s: clamp(1rem, 0.9716rem + 0.142vw, 1.125rem);
+  /* Space m: 24px → 27px */
+  --fluid-space-m: clamp(1.5rem, 1.4574rem + 0.2131vw, 1.6875rem);
+  /* Space l: 32px → 36px */
+  --fluid-space-l: clamp(2rem, 1.9432rem + 0.2841vw, 2.25rem);
+  /* Space xl: 48px → 54px */
+  --fluid-space-xl: clamp(3rem, 2.9148rem + 0.4261vw, 3.375rem);
+  /* Space 2xl: 64px → 72px */
+  --fluid-space-2xl: clamp(4rem, 3.8864rem + 0.5682vw, 4.5rem);
+  /* Space 3xl: 96px → 108px */
+  --fluid-space-3xl: clamp(6rem, 5.8295rem + 0.8523vw, 6.75rem);
+
+  /* One-up pairs */
+  /* Space 3xs-2xs: 4px → 9px */
+  --fluid-space-3xs-2xs: clamp(0.25rem, 0.179rem + 0.3551vw, 0.5625rem);
+  /* Space 2xs-xs: 8px → 14px */
+  --fluid-space-2xs-xs: clamp(0.5rem, 0.4148rem + 0.4261vw, 0.875rem);
+  /* Space xs-s: 12px → 18px */
+  --fluid-space-xs-s: clamp(0.75rem, 0.6648rem + 0.4261vw, 1.125rem);
+  /* Space s-m: 16px → 27px */
+  --fluid-space-s-m: clamp(1rem, 0.8438rem + 0.7813vw, 1.6875rem);
+  /* Space m-l: 24px → 36px */
+  --fluid-space-m-l: clamp(1.5rem, 1.3295rem + 0.8523vw, 2.25rem);
+  /* Space l-xl: 32px → 54px */
+  --fluid-space-l-xl: clamp(2rem, 1.6875rem + 1.5625vw, 3.375rem);
+  /* Space xl-2xl: 48px → 72px */
+  --fluid-space-xl-2xl: clamp(3rem, 2.6591rem + 1.7045vw, 4.5rem);
+  /* Space 2xl-3xl: 64px → 108px */
+  --fluid-space-2xl-3xl: clamp(4rem, 3.375rem + 3.125vw, 6.75rem);
+
+  /* Custom pairs */
+  /* Space s-l: 16px → 36px */
+  --fluid-space-s-l: clamp(1rem, 0.7159rem + 1.4205vw, 2.25rem);
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+}
+
+/* FONT STYLES */
+
+.yellow-font {
+  color: var(--color-yellow);
+}
+
+.blue-font {
+  color: var(--color-blue);
+}
+
+.orange-font {
+  color: var(--color-orange);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
+}
+
+/* REGULAR STYLES */
+h1 {
+  font-size: var(--font-step-5);
+}
+h2 {
+  font-size: var(--font-step-4);
+}
+h5 {
+  font-size: var(--font-step-3);
+}
+
+.bodyXL {
+  font-size: var(--font-step-3);
+}
+.bodyL {
+  font-size: var(--font-step-2);
+}
+.bodyM {
+  font-size: var(--font-step-1);
+}
+.bodyS,
+.labelL {
+  font-size: var(--font-step-0);
+}
+.labelS {
+  font-size: var(--font-step--1);
+}
+
+/* BOLD */
+.bold {
+  font-weight: 700;
+}
+
+.medium {
+  font-weight: 500;
+}
+/* MARGINS */
+.phone-side-margin {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.side-margins {
+  margin-inline: var(--fluid-space-m);
+}
+/* BREADCRUMB */
+
+.breadcrumb ol{
+  display: none;
+}
+
+
+/* buttons component design */
+/* Examples:
+<button class="button button--l button--green">Large Green</button>
+<button class="button button--m button--yellow">Medium Yellow</button>
+<button class="button button--s button--secondary">Small Secondary</button>
+*/
+/* Base Button Styles */
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  gap: 10px;
+  font-family: var(--font-family);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Sizes */
+.button--l {
+  height: 58px;
+  padding: 24px 45px;
+  font-size: var(--font-step-2);
+}
+
+.button--m {
+  padding: 15px 30px;
+  font-size: var(--font-step-1);
+}
+
+.button--s {
+  padding: 15px 20px;
+  font-size: var(--font-step-0);
+}
+
+/* PRIMARY COLORS (Default) */
+.button--green {
+  background-color: var(--color-green);
+}
+
+.button--yellow {
+  background-color: var(--color-yellow);
+}
+
+.button--blue {
+  background-color: var(--color-blue);
+}
+
+/* PRIMARY COLORS (Hover) */
+.button--green:hover {
+  background-color: var(--color-dark-green);
+}
+.button--yellow:hover {
+  background-color: var(--color-dark-yellow);
+}
+.button--blue:hover {
+  background-color: var(--color-dark-blue);
+}
+
+/* PRIMARY COLORS (Disabled) */
+.button--green:disabled,
+.button--yellow:disabled,
+.button--blue:disabled {
+  opacity: 0.7;
+}
+
+/* SECONDARY STYLES */
+.button--secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.button--secondary:disabled {
+  opacity: 0.7;
+  border-color: var(--color-black);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: fit-content;
+  align-items: center;
+  z-index: 10;
+  position: relative; /* Ensures header is positioned correctly */
+  /* background-color: var(--color-bg); */
+  width: 100%;
+  padding: var(--s-1-5); /* abby padding = 24px top and bottom padding */
+}
+
+.header > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  gap: var(--s-3);
+  width: 100%;
+}
+
+.header--white,
+.header--white > nav {
+  /* background-color: var(--color-bg); */
+  margin-block-end: var(--fluid-space-s);
+}
+
+.header--blue > nav {
+  margin: 0rem;
+}
+
+.header--blue,
+.header--blue > nav {
+  margin: 0rem;
+  background-color: var(--color-blue);
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__logo img {
+  width: 100%;
+  height: auto;
+  max-width: 114px;
+  aspect-ratio: 114 / 31.09;
+}
+
+.nav__list-item:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.buy-tickets {
+  display: none;
+}
+
+.nav__menu-button:hover > svg > rect {
+  fill: #ffffff;
+  cursor: pointer;
+}
+
+/* Overlay is fixed but below header */
+.main-menu-overlay {
+  position: fixed;
+  top: 3rem; /* height of your header */
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-blue);
+  overflow-y: auto;
+  z-index: 10; /* lower than header */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* When open, show overlay */
+.main-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* When closed, hide overlay */
+
+.main-menu-overlay.closed {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Optional: hide overlay content when closed (for accessibility) */
+.main-menu-overlay.closed .main-menu-overlay__content {
+  display: none;
+}
+
+.main-menu-overlay__content {
+  background-color: var(--color-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 2rem;
+  color: var(--color-black);
+  gap: var(--fluid-space-l);
+  width: 90%;
+  margin: 2rem auto;
+  padding-block-start: var(--fluid-space-3xl);
+}
+
+/* language sub menu */
+/* Shared green box styles */
+.nav__lang-toggle,
+.nav__lang-dropdown button,
+.nav__lang-dropdown li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: var(--color-green);
+  color: var(--color-black);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Wrapper container for language */
+.nav__list-item.nav__lang-wrapper {
+  height: var(--s-3);
+  width: var(--s-3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-green);
+  color: var(--color-black);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for wrapper */
+.nav__list-item.nav__lang-wrapper:hover {
+  background-color: var(--color-dark-green);
+}
+
+/* Dropdown container */
+.nav__lang-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background-color: var(--color-green);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 200;
+  min-width: 100%;
+}
+
+/* Buttons inside dropdown */
+.nav__lang-dropdown button {
+  width: 100%;
+  text-align: center;
+  padding: var(--s-1);
+  font-size: 0.95rem;
+}
+
+/* Hover/focus effects for dropdown options */
+.nav__lang-dropdown button:hover,
+.nav__lang-dropdown button:focus {
+  background-color: var(--color-dark-green);
+}
+
+
+
+/* GENERAL MODAL STYLING (POP-OP)  */
+.modal {
+  border: var(--s-0-25) solid var(--color-blue);
+  padding: var(--fluid-space-m);
+}
+
+.button-close-modal {
+  padding: var(--fluid-space-2xs);
+  border-radius: 50%;
+  border: 2px solid var(--color-black);
+  cursor: pointer;
+}
+
+/* BASIC FORM STYLING */
+.specialFont {
+  font-family: var(--font-display);
+  padding-block-end: var(--fluid-space-s);
+}
+
+.headerForm {
+  padding-block-end: var(--fluid-space-l);
+}
+
+label {
+  padding-block-end: var(--fluid-space-s);
+  padding-block-start: var(--fluid-space-xs);
+}
+
+.error {
+  background-color: var(--color-orange);
+  max-width: fit-content;
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+}
+
+form button {
+  margin-block-start: var(--fluid-space-m);
+  margin-block-end: var(--fluid-space-xl);
+}
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+textarea,
+select {
+  min-width: 80%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  padding: 0.75rem 1rem;
+  font-size: var(--font-step-0);
+  border: 2px solid var(--color-black);
+  background-color: var(--color-white);
+}
+input[type="date"],
+input[type="time"]{
+  max-width: 30%;
+}
+input[type="number"] {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-align: center;
+  max-width: fit-content;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-step-0);
+  gap: 0.5rem;
+}
+.form-field{
+  padding-block: var(--fluid-space-xs);
+}
+/* Banner code*/
+.banner-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.banner-text {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.banner-section {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.nav__icon--close {
+  height: 40px;
+  width: 40px;
+}
+
+.fixed__navigation {
+  position: fixed;
+  top: 1rem;
+  right: var(--fluid-space-m);
+  z-index: 1000;
+}
+
+.main-menu-overlay__content li {
+  display: flex;
+  gap: var(--fluid-space-s);
+}
+
+.open-menu__section-icon {
+  width: 2rem;
+  height: auto;
+  object-fit: contain;
+  align-self: flex-start;
+  margin-block-start: 0.3rem;
+}
+
+.open-menu__section-text h2 {
+  font-size: var(--font-step-3);
+}
+
+.open-menu__section-list li {
+  margin-block: var(--fluid-space-xs);
+}
+
+.border-t {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: black;
+  margin-block-start: var(--fluid-space-3xl);
+  padding-block-start: var(--fluid-space-3xl);
+}
+
+.footer__main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--fluid-space-l);
+  margin-block-end: var(--fluid-space-3xl);
+}
+
+.footer__titles {
+  margin-block-end: var(--fluid-space-xs);
+}
+
+.footer__section-items p {
+  margin-block-end: var(--fluid-space-2xs);
+  font-size: var(--font-step-0);
+  font-weight: 100;
+}
+
+.newsletter__section {
+  margin-block-start: var(--fluid-space-2xl);
+}
+
+.newsletter__input {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  padding: var(--fluid-space-xs);
+}
+
+.newsletter__checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  border-radius: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.newsletter__checkbox:checked::after {
+  content: "✓";
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.newsletter__checkbox-section {
+  margin-block-start: var(--fluid-space-xs);
+}
+
+.footer__logos-section {
+  display: flex;
+}
+
+.footer__logos-section img {
+  height: 5rem;
+  width: auto;
+}
+
+.footer__logo {
+  height: 2rem;
+  width: fit-content;
+}
+.footer__logo img {
+  height: 100%;
+  width: auto;
+}
+
+.footer__bottom-year {
+  margin-block: var(--fluid-space-xs);
+}
+
+.footer__bottom-links {
+  display: flex;
+  gap: var(--fluid-space-xs);
+  flex-wrap: wrap;
+}
+
+.footer__bottom-authors {
+  margin-block-start: var(--fluid-space-l);
+  margin-block-end: var(--fluid-space-xs);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
+/* responsive breakpoints */
+
+@media screen and (min-width: 20em) {
+  /* 320px */
+}
+
+@media screen and (min-width: 31rem) {
+  /* 500px */
+  .footer__main-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: stretch;
+  }
+
+  .newsletter__section {
+    grid-area: 2 / 1 / 3 / 3;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  /* 768px */
+  /* .nav__list {
+    display: flex !important;
+  } */
+  .nav__logo img {
+    max-width: 163px;
+    aspect-ratio: 163 / 44;
+  }
+  /* animation with opacity */
+  /* .nav__button {
+    display: inline-block;
+    opacity: 1;
+  } */
+  .buy-tickets {
+    display: inline-flex;
+  }
+  .nav__language-list,
+  .nav__language-list > li {
+    height: 3.6rem;
+    width: 3.6rem;
+  }
+
+  .banner-text p {
+    font-size: 1.5rem;
+  }
+  .banner-wrapper {
+    padding: 1.5rem 0;
+  }
+
+  .nav__list-item.nav__lang-wrapper {
+    height: 58px;
+    width: 58px;
+    font-size: var(--font-step-2);
+  }
+  .main-menu-overlay__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 2rem;
+  }
+  .open-menu__section-text h2 {
+    font-size: var(--font-step-4);
+  }
+
+  h1 {
+    font-size: var(--font-step-6);
+  }
+  h2 {
+    font-size: var(--font-step-5);
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* 1728px */
+  body {
+    max-width: 108rem;
+    margin: 0 auto;
+  }
+
+  .nav__logo img {
+    max-width: 236px;
+    aspect-ratio: 59 / 16;
+  }
+
+  .main-menu-overlay__content {
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+
+  .open-menu__section-text h2 {
+    font-size: var(--font-step-5);
+  }
+
+  .open-menu__section-list li {
+    margin-block: var(--fluid-space-s);
+    font-size: var(--font-step-2);
+  }
+
+  .banner-text p {
+    font-size: 2rem;
+  }
+  .banner-wrapper {
+    padding: 2rem 0;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  input[type="file"],
+  input[type="number"],
+  select {
+    min-width: 40%;
+  }
+  textarea select{
+    max-width: 60%;
+  }
+
+  .footer__main-content {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+  }
+
+  .newsletter__section {
+    grid-area: 1 / 3 / 2 / 4;
+    margin-block: 0;
+  }
+  .footer__bottom-layout-desktop {
+    display: flex;
+    align-items: end;
+    margin-block: var(--fluid-space-s);
+    gap: 1rem;
+  }
+
+  .footer__bottom-year {
+    margin: 0;
+  }
+
+  .footer__bottom-authors {
+    margin: 0 0 0 auto;
+  }
+
+  .breadcrumb ol{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: var(--fluid-space-s);
+    margin: 0;
+    gap: 0.2rem;
+    padding-block-start: var(--fluid-space-m);
+    z-index: 9;
+  }
+
+  .breadcrumb li::after {
+    content: ">";
+    margin: 0 0.2rem;
+    color: gray;
+  }
+
+  .breadcrumb li:last-child::after {
+    content: ""; }
+
+  .button--m {
+    height: 58px;
+    padding: 24px 45px;
+    font-size: var(--font-step-2);
+  }
+
+  .button--s {
+    padding: 15px 30px;
+    font-size: var(--font-step-1);
+  }
+
+  .footer__main-content{
+    margin-block-end: 0;
+  }
+}
+
+/* template */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
+}
+
+@font-face {
+  font-family: "GT Alpina";
+  src: url("../assets/fonts/GT-Alpina/Web/GT-Alpina-Fine-Standard-Bold-Italic.woff")
+      format("woff"),
+    url("../assets/fonts/GT-Alpina/Web/GT-Alpina-Fine-Standard-Bold-Italic.woff2")
+      format("woff2");
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "GT Alpina";
+  src: url("../assets/fonts/GT-Alpina/Web/GT-Alpina-Fine-Standard-Bold.woff")
+      format("woff"),
+    url("../assets/fonts/GT-Alpina/Web/GT-Alpina-Fine-Standard-Bold.woff2")
+      format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Bold-Oblique.woff2")
+      format("woff2"),
+    url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Bold-Oblique.woff")
+      format("woff");
+  font-style: oblique;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Bold.woff2")
+      format("woff2"),
+    url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Medium-Oblique.woff2")
+      format("woff2"),
+    url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Medium-Oblique.woff")
+      format("woff");
+  font-style: oblique;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Medium.woff2")
+      format("woff2"),
+    url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Medium.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Regular-Oblique.woff2")
+      format("woff2"),
+    url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Regular-Oblique.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Regular.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

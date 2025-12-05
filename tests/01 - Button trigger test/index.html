@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Trigger Test</title>
+</head>
+<body>
+<!-- 
+  Developer Notes:
+  ==================
+  
+  Button Trigger Test: 
+  If you press a button (a tag), do I get directed to printer settings to print my webpage?
+
+  Learnings:
+  Trigger is possible with Javascript. The print() method opens the print dialog to print the current document.
+-->
+ <h1>Button Trigger Test</h1>
+ <a>Get Webpage</a>
+ <script>
+    const button = document.querySelector('a');
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default action of the link
+        window.print(); // Trigger the print dialog
+    });
+ </script>   
+
+<!-- same action, different writing and button tag instead of a tag -->
+<button onclick="window.print()">Print</button>
+
+</body>
+</html>

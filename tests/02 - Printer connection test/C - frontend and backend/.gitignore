@@ -1,0 +1,12 @@
+# Node modules
+/node_modules/
+
+# Local SSL certs
+*.crt
+*.key
+
+# Local environment variables
+.env
+
+# System files
+.DS_Store

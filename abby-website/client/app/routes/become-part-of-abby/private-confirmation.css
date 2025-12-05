@@ -1,0 +1,324 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+h4 {
+    font-size: var(--font-step-3)
+}
+
+h5 {
+    font-size: var(--font-step-2);
+    margin-bottom: var(--fluid-space-2xs);
+    margin-top: var(--fluid-space-xs);
+}
+
+
+
+.smiley-succesfull_yellow {
+    width: 150px;
+    justify-self: center;
+    margin-top: var(--fluid-space-xl);
+    margin-bottom: var(--fluid-space-xl);
+}
+
+.button_private_confirmed {
+    padding: 15px 20px;
+    font-size: var(--font-step-0);
+    margin-top: var(--fluid-space-s);
+    margin-bottom: var(--fluid-space-s);
+}
+
+.ticket-private-float-left,
+.ticket-private-float-right {
+    position: absolute;
+    z-index: -2;
+    max-width: 230px;
+    opacity: 0.5;
+}
+
+.ticket-private-float-left {
+    top: 77%;
+    left: -10%;
+    transform: rotate(60deg);
+}
+
+.ticket-private-float-right {
+    top: 73%;
+    right: -12%;
+    transform: rotate(-20deg);
+}
+
+picture.ticket-private-float-right img {
+    width: 80%;
+    height: auto;
+}
+
+picture.ticket-private-float-left img {
+    width: 70%;
+    height: auto;
+}
+
+.private-confirm-main{
+    margin-bottom: 10rem;
+}
+
+.private-confirm-main-text{
+    text-align: center;
+}
+
+.private-confirm-main-text h1{
+    margin-bottom: var(--fluid-space-xl);
+}
+
+.private-confirm-main-text-1{
+    margin-bottom: var(--fluid-space-2xl);
+}
+
+/* SCROLL PART */
+.open-confirmation-next_step_section {
+    background-color: var(--color-purple);
+    padding-top: var(--fluid-space-xl);
+    padding-bottom: var(--fluid-space-m);
+}
+
+.open-confirmation-next_step_section h4 {
+    padding-bottom: var(--fluid-space-l);
+}
+
+.open-confirmation-next_step_choices {
+    display: flex;
+    gap: var(--fluid-space-m);
+    overflow-x: auto;
+    padding-bottom: var(--fluid-space-m);
+    scroll-snap-type: x mandatory;
+    margin: 0;
+}
+
+.open-confirmation-next_step_choices>div {
+    flex: 0 0 80%;
+    min-width: 90%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--fluid-space-s);
+    padding-right: var(--fluid-space-s);
+}
+
+.open-confirmation-next_step_choices picture {
+    width: 100%;
+}
+
+.open-confirmation-next_step_choices h5 {
+    margin-bottom: var(--fluid-space-xs);
+}
+
+.open-confirmation-next_step_choices p {
+    margin-bottom: var(--fluid-space-l);
+}
+
+.open-confirmation-next_step_choices .button_private_confirmed {
+    margin-top: auto;
+}
+
+  /* 320px - mobile */
+@media screen and (min-width: 20em) {
+    h1 {
+        font-size: var(--font-step-4);
+    }
+
+    .bodyXL {
+        font-size: var(--font-step-2);
+    }
+  }
+
+
+@media screen and (min-width: 29rem) {
+    .ticket-private-float-left,
+    .ticket-private-float-right {
+        position: absolute;
+        z-index: -2;
+        max-width: 250px;
+    }
+
+    .ticket-private-float-left {
+        top: 68%;
+        left: -5%;
+        transform: rotate(60deg);
+    }
+
+    .ticket-private-float-right {
+        top: 64%;
+        right: -10%;
+        transform: rotate(-20deg);
+    }
+}
+
+
+/* 768px - tablet */
+@media screen and (min-width: 48em) {
+    .button_private_confirmed {
+        padding: 15px 30px;
+        font-size: var(--font-step-1);
+    }
+
+    .ticket-private-float-left,
+    .ticket-private-float-right {
+        display: block;
+    }
+    .smiley-succesfull_yellow {
+        width: 150px;
+    }
+
+    h1{
+        font-size: var(--font-step-5);
+    }
+
+    .bodyXL {
+        font-size: var(--font-step-3);
+    }
+
+    h5{
+        font-size: var(--font-step-3);
+    }
+
+    /* SCROLL PART */
+    .open-confirmation-next_step_choices > div {
+        min-width: 45%;
+        max-width: 45%;
+      }
+
+    .open-confirmation-next_step_section{
+        margin-top: var(--fluid-space-3xl);
+        padding-top: var(--fluid-space-xl);
+    }
+
+    .open-confirmation-next_step_section h4{
+        margin-bottom: var(--fluid-space-m);
+    }
+
+    .ticket-private-float-left,
+    .ticket-private-float-right {
+        position: absolute;
+        z-index: -2;
+        max-width: 300px;
+    }
+
+    .ticket-private-float-left {
+        top: 74%;
+        left: -2%;
+        transform: rotate(70deg);
+    }
+
+    .ticket-private-float-right {
+        top: 67%;
+        right: -8%;
+        transform: rotate(-20deg);
+    }
+}
+
+
+/* 1728px - desktop */
+@media screen and (min-width: 64em) {
+    .button_private_confirmed {
+        height: 58px;
+        padding: 24px 45px;
+        font-size: var(--font-step-2);
+    }
+
+    .smiley-succesfull_yellow {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: var(--font-step-6);
+    }
+
+    .ticket-private-float-left,
+    .ticket-private-float-right {
+    position: absolute;
+    z-index: -2;
+    max-width: 350px;
+    }
+
+    .ticket-private-float-left {
+    top: 70%;
+    left: 3%;
+    transform: rotate(-10deg);
+    }
+
+    .ticket-private-float-right {
+    top: 73%;
+    right: -5%;
+    transform: rotate(70deg);
+    }
+
+    picture.ticket-private-float-right img {
+    width: 80%;
+    height: auto;
+    }
+
+    picture.ticket-private-float-left img{
+    width: 70%;
+    height: auto;
+    }
+
+    /* SCROLL PART */
+    .open-confirmation-next_step_section {
+        padding-left: var(--fluid-space-l);
+    }
+
+    .open-confirmation-next_step_choices {
+        overflow: visible;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .open-confirmation-next_step_choices>div {
+        flex: 1 1 30%;
+        min-width: 0;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+
+    .ticket-private-float-left,
+    .ticket-private-float-right {
+    position: absolute;
+    z-index: -2;
+    max-width: 400px;
+    }
+
+    .ticket-private-float-left {
+    top: 60%;
+    left: 2%;
+    transform: rotate(-10deg);
+    }
+
+    .ticket-private-float-right {
+    top: 68%;
+    right: -5%;
+    transform: rotate(70deg);
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .ticket-private-float-left,
+    .ticket-private-float-right {
+        position: absolute;
+        z-index: -2;
+        max-width: 600px;
+    }
+
+    .ticket-private-float-left {
+        top: 30%;
+        left: -5%;
+        transform: rotate(-10deg);
+    }
+
+    .ticket-private-float-right {
+        top: 55%;
+        right: -7%;
+        transform: rotate(60deg);
+    }
+}

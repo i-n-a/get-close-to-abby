@@ -1,0 +1,30 @@
+.invitation__full-message{
+    background-color: var(--color-yellow);
+    padding: var(--fluid-space-m);
+    text-align: center;
+    margin-bottom: var(--fluid-space-xl);
+}
+
+.sadface-emoji-closed{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--fluid-space-xs);
+    margin-bottom: var(--fluid-space-m); 
+}
+
+.invitation__full-text{
+    font-size: var(--font-step-2);
+    font-weight: 500;
+    padding-bottom: var(--fluid-space-xl);
+}
+
+.invitation__full-text-1{
+    font-size: 1.15rem;
+    font-weight: 500;
+    padding-bottom: var(--fluid-space-xs);
+}
+
+.invitation__full-text-2{
+    padding-bottom: var(--fluid-space-l);
+}

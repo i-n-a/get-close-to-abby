@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardcoded Ticket Print Test</title>
+</head>
+<body>
+<!--  
+    Developer Notes:
+    ==================  
+    Hardcoded Ticket Print Test:
+    If you click the button, does the printer print a ticket with fixed sample data (e.g., name and time)? 
+    In this case, can it print an image?
+
+    Problem:
+    Browsers do not allow silent printing for images.
+
+    Solution:
+    - Use JavaScript to download a preprocessed ticket image to a folder.
+    - Let macOS Automator watch that folder and print the image automatically.
+
+    Tools Used:
+    - HTML + JavaScript
+    - Automator (macOS Quick Action)
+    - Standard USB printer
+
+    Outcome:
+    ✅ Image downloaded and auto-printed successfully from the Downloads folder.
+-->
+  <h1>Hardcoded Ticket Print Test A - Print Image </h1>
+  <button id="printImage">Download + Auto-Print Ticket</button>
+
+  <script>
+    document.getElementById('printImage').addEventListener('click', () => {
+      const imageUrl = 'assets/close_up_240x320.jpeg'; 
+      const a = document.createElement('a');
+      a.href = imageUrl;
+      a.download = 'ticket.png';
+      a.click();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+ /* // You can override this with Tailwind classes */
+
+:root{
+  --color-black: #090909;
+  --color-white: #F7F7F7;
+  --color-blue: #5F90FF;
+  --color-yellow: #FFBF50;
+  --color-brown: #691E12;
+  --color-green: #00A468;
+  --color-orange: #FF5F00;
+  --color-purple: #BB7CD2;
+
+  /* FullCalendar Technique 1: custom css variables */
+    --fc-border-color: var(--color-black);
+}
+
+
+body{
+  margin: 5.625rem;
+}
+
+/* FullCalendar Technique 2: overwriting properties */
+.fc-event.fc-event-start.fc-event-end.fc-event-past.fc-daygrid-event.fc-daygrid-dot-event {
+  background-color: var(--color-green);
+  border-color: var(--color-green);
+  color: white;
+}
+
+.fc-col-header{
+  border-color: var(--color-black) 1px solid;
+  background-color: var(--color-white);
+}
+
+.fc-scrollgrid  fc-scrollgrid-liquid > thead{
+  border-color: var(--color-yellow);
+}
+
+/* Custom styles for FullCalendar navigation buttons */
+.fc .fc-prev-button,
+.fc .fc-next-button {
+  @apply bg-white text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 shadow;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+/* Replace with your own SVG data URI */
+.fc .fc-prev-button {
+  background-image: url("./assets/arrow_left.svg");
+}
+
+.fc .fc-next-button {
+  background-image: url("./assets/arrow_next.svg");
+}
+
+/* Hide default icon text */
+.fc .fc-prev-button .fc-icon,
+.fc .fc-next-button .fc-icon {
+  display: none;
+}
+
+.fc .fc-today-button {
+  @apply bg-blue-500 text-white px-4 py-1 rounded-full shadow hover:bg-blue-600 transition;
+}
+
+.fc .fc-toolbar-chunk {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between buttons */
+}
+
+/* Optional: make buttons same size */
+/* .fc .fc-button {
+  @apply h-10 min-w-[2.5rem] px-3 text-sm;
+} */
+
+/* Optional mobile responsiveness */
+@media (max-width: 640px) {
+  .fc .fc-toolbar-chunk {
+    flex-direction:row;
+    align-items: flex-start;
+  }
+}
+
+/* Remove borders from day-of-week header cells */
+/* .fc .fc-col-header-cell {
+  border: none !important;
+  background-color: transparent; /* Optional, for clean look 
+} */
+
+/* Optional: remove entire header row border */
+/* .fc .fc-col-header {
+  border-bottom: none !important;
+} */
+
+/* Remove internal borders from weekday header cells */
+.fc .fc-col-header-cell {
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  background-color: transparent;
+}
+
+/* Keep outer border (left + right) only once on the full header row */
+.fc .fc-col-header {
+  border-left: 1px solid #ddd !important;
+  border-right: 1px solid #ddd !important;
+  border-top: 1px solid #ddd !important;
+  border-bottom: none !important; /* intentionally removed */
+}
+
+/* Restore top border to the first row of the grid body */
+.fc .fc-daygrid-body tr:first-child td {
+  border-top: 1px solid #ddd !important;
+}
+

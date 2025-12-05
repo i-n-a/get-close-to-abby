@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/styles.css" rel="stylesheet">
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+<!-- 
+    Developer Notes:
+    ==================    
+    
+    Can we make a Calendar quickly with existing UI or other libraries?
+
+    Learnings:
+    - Tailwind CSS is a utility-first CSS framework that can be used to quickly build custom designs.
+    - Tailwind CSS can be used to create a calendar quickly. But the tailwind UI library is not for free so didn't use it.
+    - Tailwind CSS let you write your css in the HTML file, which is not the best practice but it is a quick way to prototype. Like e.g. className="bg-blue-500 text-white font-bold py-2 px-4 rounded".
+    - See Figjam file for more details: https://www.figma.com/board/vT4THCcwrIsUxfunAO2sty/Integration4?node-id=417-4656&t=IsTfs76dR1NZEAeI-4
+    
+    Solution:
+    - Use Tailwind CSS to create a simple calendar application.
+    - Connected Supabase to the calendar to retrieve events
+    - Created a list of events and calendar view. Depending on the date number you select in the calendar, the event list will be filtered to show only the events for that date (ongoing events included).
+    - Solution is in FilterListCalendar.jsx file.
+
+    ‼️ Limitations:
+    - Quick prototype test for building calendar UI.
+    - This is a simple test to check if Tailwind CSS can be used for building a calendar UI.
+    - This is not a full implementation, just a quick test to see if Tailwind CSS can be used for building a calendar UI.
+-->
