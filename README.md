@@ -25,10 +25,10 @@ In the tests folder you can find many test we did to explore technologies and wa
 
 
 # List team members and roles
--  Melisa: Coordinator, Implementer, Completer Finisher (UX Lead)
--  Kristina: Plant, Teamworker, Specialist (UX / VD Lead)
--  Tom: resource investigator, shaper, completer finisher ( VD Lead)
--  Inge: ⁠plant, ⁠specialist ( Code Lead)
+-  [Melisa](https://github.com/Peisinoe2427): Coordinator, Implementer, Completer Finisher (UX Lead)
+-  [Kristina](https://github.com/Kristina9950): Plant, Teamworker, Specialist (UX / VD Lead)
+-  [Toms](https://github.com/tkrastinsr): resource investigator, shaper, completer finisher ( VD Lead)
+-  [Inge](https://github.com/i-n-a)  : ⁠plant, ⁠specialist ( Code Lead)
 
 ## List agreements
 - Communicate to the team:
