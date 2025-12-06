@@ -91,7 +91,7 @@ export default function ticketPage({loaderData}) {
         </div>
 
         <p className="ticket-heading__sticker bodyS">
-          Download a Ticket here, or a Phisical one from a box
+          Download a Ticket here, or a Physical one from a box
         </p>
         <div className="ticket-heading__image-container">
           <div className="ticket-heading__image-container-layout">

@@ -13,7 +13,7 @@ The site supports an open call campaign where visitors are invited to discover h
 
 ## 📁 Abby-website Folder 
 
-In the Abby-website you will find all the pages we created, you can explore the result at 👉 [Get Close to Abby](https://getclose-toabby.netlify.app/)
+In the Abby-website you will find all the pages we created, you can explore the result at 👉 [Get Close to Abby](https://get-close-to-abby.netlify.app/)
 Find more explanations on how to explore it in the README.
 
 ## 📁 Printer-Station Folder 

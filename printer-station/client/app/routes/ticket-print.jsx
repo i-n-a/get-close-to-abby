@@ -16,7 +16,7 @@ export const clientLoader = async () => {
 function TicketPrint({ loaderData }) {
   // const { closeup, clue } = loaderData;
   const { ticketData } = loaderData;
-  
+  console.log("Ticket Data in TicketPrint:", ticketData);
   const [port, setPort] = useState(null);
   const readerRef = useRef(null);
 
@@ -36,7 +36,7 @@ function TicketPrint({ loaderData }) {
         if (done) break;
         if (value && value.trim() === 'pressed') {
           console.log('Arduino button pressed');
-          generateTicketPDF(ticketData.ticketId, ticketData.ticketImage, ticketData.ticketClue);
+          generateTicketPDF(ticketData.ticketImage,ticketData.ticketClue,ticketData.ticketId);
         }
       }
 
@@ -52,7 +52,7 @@ function TicketPrint({ loaderData }) {
     <>
       <div>
         <button onClick={connectToArduino}>Connect to Arduino</button>
-        <button onClick={() => generateTicketPDF(ticketData.ticketId,ticketData.ticketImage, ticketData.ticketClue)}>Download Ticket PDF</button>
+        <button onClick={() => generateTicketPDF(ticketData.ticketImage, ticketData.ticketClue,ticketData.ticketId)}>Download Ticket PDF</button>
       </div>
     </>
   );

@@ -8,6 +8,7 @@
     "start": "react-router-serve ./build/server/index.js"
   },
   "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
     "@pubnub/chat": "^0.12.1",
     "@react-router/node": "^7.5.3",
     "@react-router/serve": "^7.5.3",
