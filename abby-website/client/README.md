@@ -45,12 +45,12 @@ Visit the homepage to learn what Abby is all about.
 - **Explore the “Get Close to Abby” section** to understand how you can join in the story.
 - **Check out “Become Part of Abby”** to see how others are contributing to the space.
 
-👉 [Visit the Main Website](https://getclose-toabby.netlify.app/)
+👉 [Visit the Main Website](https://get-close-to-abby.netlify.app/)
 
 ## 📝 Step 2: Submit Your Own Close-Up
 People that visit the museum had the challenge to find where the close-up on their ticket fits into the Stadsliving spaces at Abby. This is the flow they would follow if they find it. They scan the QR code and unlock a reflection left by the original user who submitted the close-up image. They can then also submit their own close-up and reflection! IS FOR MOBILE ONLY
 
-🔗 [Submit Your Close-Up](https://getclose-toabby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/found-it)
+🔗 [Submit Your Close-Up](https://get-close-to-abby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/found-it)
 
 📱 Scan the QR code below to open the page on your phone:
 
@@ -64,28 +64,28 @@ People can submit open invitations on site or on the website, they are then hang
 #### Visit the open invitation #5
 📱 Scan the QR code below or click the link to see the open invitation 5.
 
-🔗 [Closed Open Invitation link](https://getclose-toabby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/open-invitation/18399762-055d-497f-8adf-4746d127273f)
+🔗 [Closed Open Invitation link](https://get-close-to-abby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/open-invitation/18399762-055d-497f-8adf-4746d127273f)
 
 <img src="./app/assets/images/png/5.png" alt="Submit Close QR" width="150" />
 
 #### Visit the open invitation #19
 📱 Scan the QR code below or click the link to see the open invitation 19.
 
-🔗 [Closed Open Invitation link](https://getclose-toabby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/open-invitation/3f179ca2-03b3-4815-89ec-14513cbc6462)
+🔗 [Closed Open Invitation link](https://get-close-to-abby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/open-invitation/3f179ca2-03b3-4815-89ec-14513cbc6462)
 
 <img src="./app/assets/images/png/19.png" alt="Submit Close QR" width="150" />
 
 #### Visit the open invitation #20
 📱 Scan the QR code below or click the link to see the open invitation 20.
 
-🔗 [Closed Open Invitation link](https://getclose-toabby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/open-invitation/5004cf29-3fd0-482e-9386-a31929a88c5e)
+🔗 [Closed Open Invitation link](https://get-close-to-abby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/open-invitation/5004cf29-3fd0-482e-9386-a31929a88c5e)
 
 <img src="./app/assets/images/png/20.png" alt="Submit Close QR" width="150" />
 
 #### Fully Booked Open invitation
 📱 Scan the QR code below or click the link to see what a fully booked open invitation looks like:
 
-🔗 [Closed Open Invitation link](https://getclose-toabby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/open-invitation/b32d9b45-ad77-442a-b362-d0586860a007)
+🔗 [Closed Open Invitation link](https://get-close-to-abby.netlify.app/open-call/get-close-to-abby/become-part-of-abby/open-invitation/b32d9b45-ad77-442a-b362-d0586860a007)
 
 <img src="./app/assets/images/png/4closed.png" alt="Submit Close QR" width="150" />
 
