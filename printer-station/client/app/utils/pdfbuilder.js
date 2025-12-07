@@ -4,8 +4,8 @@ import mapImage from '../assets/images/png/ticket/abby_map.png';
 import { convertImageToGrayscale } from './grayscale';
 import logo from '../assets/images/png/ticket/logo-abby-get-close.png';
 import qrCode from '../assets/images/png/ticket/qr-code.png';
-import fontRegularUrl from "../assets/fonts/GT-Walsheim/Desktop/GT-Walsheim-Regular.otf";
-import fontBoldUrl    from "../assets/fonts/GT-Walsheim/Desktop/GT-Walsheim-Bold.otf";
+import fontRegularUrl from "../assets/fonts/GT-Walsheim/Desktop/GT-Walsheim-Regular.ttf";
+import fontBoldUrl    from "../assets/fonts/GT-Walsheim/Desktop/GT-Walsheim-Bold.ttf";
 
 // (0,0) is bottom-left in pdf-lib
 
