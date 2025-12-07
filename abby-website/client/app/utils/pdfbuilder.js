@@ -48,8 +48,8 @@ export async function generateTicketPDF(
   const fontRegularBytes = await fetch(fontRegularUrl).then(res => res.arrayBuffer());
   const fontBoldBytes = await fetch(fontBoldUrl).then(res => res.arrayBuffer());
   // Embed in pdf-lib
-  const fontRegular = await pdfDoc.embedFont(fontRegularBytes,{ subset: true });
-  const fontBold = await pdfDoc.embedFont(fontBoldBytes,{ subset: true });
+  const fontRegular = await pdfDoc.embedFont(fontRegularBytes);
+  const fontBold = await pdfDoc.embedFont(fontBoldBytes);
 
   /* ---------------- FRONT PAGE ---------------- */
 
