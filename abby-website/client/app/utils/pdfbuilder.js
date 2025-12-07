@@ -4,8 +4,8 @@ import mapImage from '../assets/images/png/ticket/abby_map.png';
 import { convertImageToGrayscale } from './grayscale';
 import logo from '../assets/images/png/ticket/logo-abby-get-close.png';
 import qrCode from '../assets/images/png/ticket/qr-code.png';
-import fontRegularUrl from "../assets/fonts/GT-Walsheim/Desktop/GT-Walsheim-Regular.ttf";
-import fontBoldUrl    from "../assets/fonts/GT-Walsheim/Desktop/GT-Walsheim-Bold.ttf";
+import fontRegularUrl from "../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Regular.woff2";
+import fontBoldUrl    from "../assets/fonts/GT-Walsheim/Web/GT-Walsheim-Bold.woff2";
 
 // (0,0) is bottom-left in pdf-lib
 
@@ -48,8 +48,8 @@ export async function generateTicketPDF(
   const fontRegularBytes = await fetch(fontRegularUrl).then(res => res.arrayBuffer());
   const fontBoldBytes = await fetch(fontBoldUrl).then(res => res.arrayBuffer());
   // Embed in pdf-lib
-  const fontRegular = await pdfDoc.embedFont(fontRegularBytes,{ subset: false });
-  const fontBold = await pdfDoc.embedFont(fontBoldBytes,{ subset: false });
+  const fontRegular = await pdfDoc.embedFont(fontRegularBytes,{ subset: true });
+  const fontBold = await pdfDoc.embedFont(fontBoldBytes,{ subset: true });
 
   /* ---------------- FRONT PAGE ---------------- */
 
