@@ -9,7 +9,7 @@ Abby is not just a physical space. It’s a place for connection, creativity, an
 The site supports an open call campaign where visitors are invited to discover hidden details in the space and respond to them through creative submissions. This website is just a fraction of the touchpoints designed for this concept. Look at our Figjam to see it all!
 
 ## Project Video
-[![🎥Watch the video](./media/thumbnail_small.jpeg)](./media/get_close_to_abby_reel.mp4)
+[![🎥Watch the video](./media/thumbnail_small.jpeg)](https://www.instagram.com/p/DR-3O6pD0x0/)
 
 # How to Explore these Folders
 
