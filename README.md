@@ -1,13 +1,15 @@
 # Welcome to Get Close to Abby!
 This is the code for the "Get Close to Abby" site, built by Inge, Melisa, Tom and Kristina.
 
-## Goal:
+## Goal
 Invite visitors to engage creatively with the Abby cultural space in Kortrijk.
 
 ## Concept Summary
 Abby is not just a physical space. It’s a place for connection, creativity, and co-creation.
 The site supports an open call campaign where visitors are invited to discover hidden details in the space and respond to them through creative submissions. This website is just a fraction of the touchpoints designed for this concept. Look at our Figjam to see it all!
 
+## Project Video
+[![🎥Watch the video](./media/thumbnail.jpg)](./media/get_close_to_abby_reel.mp4)
 
 # How to Explore these Folders
 
@@ -56,5 +58,3 @@ In the tests folder you can find many test we did to explore technologies and wa
 🔗 [DESIGN FIGMA (DESIGN)](https://www.figma.com/design/go55byDZ7C6wfbLYm2NrxB/ABBY?node-id=0-1&t=LyXHnSRbkaJyzfhZ-1)
 
 🔗 [MICROSITE UX (UX PROCESS)](https://www.figma.com/proto/7oWCjH1Cf8q9FHsQV0CzcF/Microsite_team8_Integration4?page-id=50%3A2&node-id=50-4&viewport=160%2C146%2C0.1&t=9gCRO2jqtNg3ec3T-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=50%3A4&show-proto-sidebar=1)
-
-🔗 [GOOGLE DRIVE](https://drive.google.com/drive/folders/1WWujppiCrbbZv5MnVedbSnluSGUW8BEM?usp=drive_link)
