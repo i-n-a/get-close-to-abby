@@ -44,14 +44,6 @@ Whenever a file is added to Downloads, Automator automatically sends it to the p
 - You need to have a default printer set up on your Mac for this to work.
 - Test is done with USB connected printer, not network printer.
 
-
-## Login info
-If you want to access the databases, you can access them with these accounts.
-### Supabase
-Email: inge.ackerman@gmail.com
-
-Password: R7JdZLX7EhRx66V!
-
 ## 🔒 Access to Databases (Security Notice)
 
 For privacy and security reasons, the original project credentials (Supabase, PubNub, APIs) are not included in this public repository.
